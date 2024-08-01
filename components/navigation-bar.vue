@@ -1,15 +1,11 @@
 <template>
   <div
-    class="flex flex-row bg-blue-800 p-2 h-16 items-center justify-center rounded-b-md"
+    class="flex flex-row bg-slate-900 p-2 h-16 items-center rounded-b-md justify-end"
   >
-    <div class="flex-1"></div>
-    <NuxtLink to="/">
-      <h1 class="font-sans text-3xl text-white font-bold">Safe Gergis</h1>
-    </NuxtLink>
-    <button class="flex-1" @click="showNav = !showNav">
+    <button @click="showNav = !showNav">
       <Icon
         :name="showNav ? 'formkit:up' : 'formkit:down'"
-        class="mt-2 size-9 hover:size-11"
+        class="mt-2 mr-2 size-9 hover:size-11"
         style="color: white"
       />
     </button>
