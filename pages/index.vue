@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-slate-900 flex flex-col justify-start content-middle p-6">
+  <div class="bg-slate-900 flex flex-col justify-start content-middle">
     <h1 class="text-white text-2xl font-semibold mb-2">
       Hi, my name is <br />
     </h1>
