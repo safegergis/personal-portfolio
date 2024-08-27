@@ -1,6 +1,5 @@
 <template>
-  <div class="bg-slate-900 p-6">
-    <navigation-bar />
+  <div class="bg-slate-900 px-6">
     <slot />
   </div>
 </template>

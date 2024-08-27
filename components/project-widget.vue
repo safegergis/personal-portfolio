@@ -1,8 +1,10 @@
 <template>
   <div
-    class="bg-transparent flex flex-col border-2 border-indigo-500 p-2 rounded-md justify-end"
+    class="bg-transparent flex flex-col border-2 border-indigo-500 p-2 justify-between rounded-md w-full md:w-96"
   >
-    <h3 class="text-indigo-400 font-semibold text-xl">{{ title }}</h3>
+    <h3 class="text-indigo-400 font-semibold text-xl">
+      {{ title }}
+    </h3>
     <p class="text-white font-mono">{{ description }}</p>
 
     <div class="flex justify-end">
