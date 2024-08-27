@@ -12,29 +12,33 @@
     </div>
     <p class="text-md text-white text-left">
       This project showcases my expertise in crafting modern and performant web
-      applications. Leveraging the powerful combination of AWS, Vue.js, and
+      applications. Leveraging the powerful combination of AWS, Nuxt, and
       Vuetify, I developed a website that delivers a seamless and engaging user
       experience. By harnessing the capabilities of AWS, I ensured optimal
-      performance, scalability, and reliability. The intuitive Vue.js framework
-      provided a solid foundation for building dynamic and interactive
-      components, while Vuetify's extensive library of pre-designed elements
-      streamlined the development process and ensured a polished aesthetic.
+      performance, scalability, and reliability. The Nuxt framework provided a
+      solid foundation for building dynamic and interactive components, while
+      Vuetify's extensive library of pre-designed elements streamlined the
+      development process and ensured a polished aesthetic.
       <br />
       Throughout the development process, I prioritized speed and efficiency,
       meticulously optimizing the website to achieve lightning-fast load times
       and smooth interactions. Careful attention was also given to search engine
       optimization (SEO) to enhance the website's visibility and reach.
       <br />
-      The website's responsive design ensures that it looks and functions
-      flawlessly across a wide range of devices, from desktops to smartphones.
-      This adaptability provides visitors with a consistent and user-friendly
-      experience, regardless of their chosen platform.
-      <br />
       This project exemplifies my proficiency in full-stack web development,
       combining front-end expertise with back-end infrastructure management.
       It's a testament to my commitment to delivering high-quality, user-centric
       solutions that leverage the latest technologies.
     </p>
+    <div class="flex justify-center mt-2">
+      <a href="https://betabiomed.com/">
+        <button
+          class="text-indigo-500 bg-transparent border text-semibold border-indigo-500 rounded-md w-48"
+        >
+          Visit the project
+        </button>
+      </a>
+    </div>
   </div>
 </template>
 
