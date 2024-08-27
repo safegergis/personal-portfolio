@@ -4,7 +4,7 @@
       ><Icon name="formkit:arrowleft"
     /></a>
     <div v-for="i in [currentIndex]" :key="i">
-      <img class="rounded-md" :src="currentImg" />
+      <NuxtImg class="rounded-md" size="50vw" :src="currentImg" />
     </div>
 
     <a class="text-white ml-2" @click="next" href="#"
