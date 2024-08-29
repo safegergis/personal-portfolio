@@ -112,6 +112,9 @@ const projects = [
     link: "projects/rn-jobsearch",
   },
 ];
+
+const test = await useFetch("/api/images");
+console.log(test);
 </script>
 
 <style></style>
