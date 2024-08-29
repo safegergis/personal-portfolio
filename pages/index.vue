@@ -84,11 +84,22 @@
           class="my-4"
         />
       </div>
+      <div class="flex flex-col items-start">
+        <hr
+          class="w-full border-t border-indigo-400 border-4 mt-6 rounded-md"
+        />
+        <h2
+          class="text-white items-start text-2xl mt-10 font-semibold md:text-4xl md:ml-14"
+        >
+          Gallery
+        </h2>
+        <image-gallery :imageIDs="imageIDs" />
+      </div>
     </div>
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const projects = [
   {
     name: "BETA Biomed",
@@ -114,7 +125,7 @@ const projects = [
 ];
 
 const { data } = await useFetch("/api/images");
-console.log(data.value);
+const imageIDs = data?.value?.images;
 </script>
 
 <style></style>

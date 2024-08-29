@@ -5,9 +5,10 @@ cloudinary.config({
   api_key: "711217468236935",
   api_secret: env.cloudinarySecret,
 });
+
 let publicIds: string[] = [];
 cloudinary.api
-  .resources()
+  .resources({ max_results: 50 })
   .then((jsonData) => {
     publicIds = jsonData.resources.map((resource) => resource.public_id);
   })
