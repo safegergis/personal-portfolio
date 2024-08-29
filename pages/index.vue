@@ -113,8 +113,8 @@ const projects = [
   },
 ];
 
-const test = await useFetch("/api/images");
-console.log(test);
+const { data } = await useFetch("/api/images");
+console.log(data.value);
 </script>
 
 <style></style>
