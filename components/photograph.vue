@@ -2,10 +2,11 @@
   <div>
     <button @click="modalShown = !modalShown">
       <NuxtImg
-        class="flex-grow rounded-lg transition ease-in-out delay-150 hover:-translate-y-2 hover:scale-105"
+        class="flex-grow rounded-lg transition ease-in-out hover:-translate-y-2 hover:scale-105"
         provider="cloudinary"
         :src="props.imageID"
-        sizes="500px"
+        width="300"
+        height="300"
         fit="thumbnail"
         :placeholder="[300, 300, 5, 100]"
       />
@@ -16,7 +17,10 @@
     >
       <div class="relative m-auto">
         <button class="absolute right-1 z-10" @click="modalShown = !modalShown">
-          <Icon name="formkit:close" class="text-white z-10 size-10" />
+          <Icon
+            name="formkit:close"
+            class="text-white text-opacity-70 hover:text-opacity-100 z-10 size-10"
+          />
         </button>
         <NuxtImg
           class="max-w-screen max-h-screen lg:max-w-[1000px] lg:max-h-[1000px] object-cover"
