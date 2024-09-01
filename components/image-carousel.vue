@@ -1,10 +1,13 @@
 <template>
-  <div class="w-[90vw]">
-    <Swiper :modules="[SwiperNavigation]">
-      <SwiperSlide v-for="i in images" :key="i">
-        <NuxtImg class="rounded-md" fit="contain" :src="i" />
-      </SwiperSlide>
-    </Swiper>
+  <div class="my-4">
+    <Carousel :breakpoints="carouselBreakpoints">
+      <Slide class="p-3" v-for="i in images" :key="i">
+        <NuxtImg width="700" :src="i" />
+      </Slide>
+      <template #addons>
+        <Navigation />
+      </template>
+    </Carousel>
   </div>
 </template>
 
@@ -12,6 +15,13 @@
 const props = defineProps<{
   images: string[];
 }>();
+
+const carouselBreakpoints = {
+  700: {
+    itemsToShow: 2.5,
+    wrapAround: true,
+  },
+};
 </script>
 
 <style></style>

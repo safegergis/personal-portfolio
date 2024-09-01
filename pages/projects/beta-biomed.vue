@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col justify-start p-12">
+  <div class="flex flex-col justify-start md:p-12 h-screen">
     <h1 class="text-white text-2xl md:text-4xl font-semibold">
       Project <br />
     </h1>
@@ -18,7 +18,7 @@
     <div class="bg-slate-900 mx-auto">
       <image-carousel :images="images" />
     </div>
-    <p class="text-md md:text-xl text-white text-left md:text-justify">
+    <p class="text-md md:text-xl text-white text-justify">
       This project showcases my expertise in crafting modern and performant web
       applications. Leveraging the powerful combination of AWS, Nuxt, and
       Vuetify, I developed a website that delivers a seamless and engaging user
