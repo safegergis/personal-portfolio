@@ -1,16 +1,24 @@
 <template>
-  <div class="flex flex-col justify-start">
-    <h1 class="text-white text-2xl font-semibold">Project <br /></h1>
+  <div class="flex flex-col justify-start p-12">
+    <h1 class="text-white text-2xl md:text-4xl font-semibold">
+      Project <br />
+    </h1>
     <a
-      class="text-indigo-400 text-5xl font-bold"
+      class="text-indigo-400 text-5xl md:text-7xl font-bold"
       href="https://betabiomed.com"
       target="_blank"
       >BETA Biomed</a
     >
-    <div class="bg-slate-900 h-350px">
+    <NuxtLink
+      class="text-gray-300 text-xl md:text-3xl font-medium hover:text-white ml-1"
+      to="/"
+    >
+      go back?
+    </NuxtLink>
+    <div class="bg-slate-900 mx-auto">
       <image-carousel :images="images" />
     </div>
-    <p class="text-md text-white text-left">
+    <p class="text-md md:text-xl text-white text-left md:text-justify">
       This project showcases my expertise in crafting modern and performant web
       applications. Leveraging the powerful combination of AWS, Nuxt, and
       Vuetify, I developed a website that delivers a seamless and engaging user
@@ -33,7 +41,7 @@
     <div class="flex justify-center mt-2">
       <a href="https://betabiomed.com/">
         <button
-          class="text-indigo-500 bg-transparent border text-semibold border-indigo-500 rounded-md w-48"
+          class="text-indigo-500 bg-transparent border text-semibold border-indigo-500 rounded-md w-48 md:text-xl hover:bg-indigo-500 hover:text-slate-900"
         >
           Visit the project
         </button>
@@ -43,7 +51,7 @@
 </template>
 
 <script setup>
-const images = ["/img/beta/1.png", "/img/beta/2.png"];
+const images = ["/img/beta/1.png", "/img/beta/2.png", "/img/beta/3.png"];
 </script>
 
 <style></style>

@@ -6,7 +6,8 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@nuxt/icon",
     "@nuxt/image",
-    "@nuxtjs/cloudinary",
+    "nuxt-swiper",
+    "@vueuse/nuxt",
   ],
   runtimeConfig: {
     cloudinarySecret: process.env.CLOUDINARY_SECRET_KEY,

@@ -1,7 +1,8 @@
 <template>
   <div class="bg-slate-900 flex flex-col justify-start content-middle">
     <div
-      class="md:h-screen md:flex md:items-center md:px-12 md:justify-between"
+      class="md:h-screen md:flex md:items-center md:px-12 md:justify-between transition ease-in-out duration-700"
+      :class="loaded ? 'opacity-100 ' : 'opacity-0 translate-y-40'"
     >
       <div class="md:flex-none md:mb-24">
         <h1 class="text-white text-2xl font-semibold mb-2 md:text-5xl">
@@ -70,7 +71,11 @@
       <span class="px-3 text-slate-500"> more below </span>
       <hr class="flex-grow border-t border-indigo-300" />
     </div>
-    <div class="mt-10">
+    <div
+      class="mt-10 transition ease-in-out duration-1000"
+      ref="project"
+      :class="projectsVisible ? 'opacity-100' : 'opacity-0'"
+    >
       <h2 class="text-white text-2xl font-semibold md:text-4xl md:ml-14">
         Projects
       </h2>
@@ -84,7 +89,11 @@
           class="my-4"
         />
       </div>
-      <div class="flex flex-col items-start">
+      <div
+        class="flex flex-col items-start transition ease-in-out duration-1000"
+        ref="gallery"
+        :class="galleryVisible ? 'opacity-100' : 'opacity-0'"
+      >
         <hr
           class="w-full border-t border-indigo-400 border-4 mt-6 rounded-md"
         />
@@ -126,6 +135,18 @@ const projects = [
 
 const { data } = await useFetch("/api/images");
 const imageIDs = data?.value?.images;
+
+const loaded = ref(false);
+
+onMounted(() => {
+  loaded.value = true;
+});
+
+const project = ref(null);
+const gallery = ref(null);
+
+const projectsVisible = useElementVisibility(project);
+const galleryVisible = useElementVisibility(gallery);
 </script>
 
 <style></style>
