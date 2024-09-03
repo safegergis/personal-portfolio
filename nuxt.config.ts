@@ -17,4 +17,7 @@ export default defineNuxtConfig({
       baseURL: "https://res.cloudinary.com/safegergisportfolio/image/upload/",
     },
   },
+  app: {
+    pageTransition: { name: "page", mode: "out-in" },
+  },
 });

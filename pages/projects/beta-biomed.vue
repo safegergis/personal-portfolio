@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col justify-start md:p-12 h-screen">
+  <div class="flex flex-col justify-start md:p-12">
     <h1 class="text-white text-2xl md:text-4xl font-semibold">
       Project <br />
     </h1>
@@ -18,26 +18,50 @@
     <div class="bg-slate-900 mx-auto">
       <image-carousel :images="images" />
     </div>
-    <p class="text-md md:text-xl text-white text-justify">
-      This project showcases my expertise in crafting modern and performant web
-      applications. Leveraging the powerful combination of AWS, Nuxt, and
-      Vuetify, I developed a website that delivers a seamless and engaging user
-      experience. By harnessing the capabilities of AWS, I ensured optimal
-      performance, scalability, and reliability. The Nuxt framework provided a
-      solid foundation for building dynamic and interactive components, while
-      Vuetify's extensive library of pre-designed elements streamlined the
-      development process and ensured a polished aesthetic.
-      <br />
-      Throughout the development process, I prioritized speed and efficiency,
-      meticulously optimizing the website to achieve lightning-fast load times
-      and smooth interactions. Careful attention was also given to search engine
-      optimization (SEO) to enhance the website's visibility and reach.
-      <br />
-      This project exemplifies my proficiency in full-stack web development,
-      combining front-end expertise with back-end infrastructure management.
-      It's a testament to my commitment to delivering high-quality, user-centric
-      solutions that leverage the latest technologies.
-    </p>
+    <div class="container mx-auto p-4 text-white">
+      <h2 class="text-3xl font-bold mb-4">Introduction</h2>
+
+      <p class="mb-6">
+        This project showcases a dynamic web application built with the Vue.js
+        framework, leveraging Nuxt.js for server-side rendering and enhanced
+        performance. It's currently live and serving users, offering a visually
+        appealing and user-friendly experience. The frontend is crafted using
+        Vuetify, a comprehensive UI component library, ensuring a polished and
+        consistent look.
+      </p>
+
+      <h2 class="text-2xl font-bold mb-4">Key Features</h2>
+
+      <ul class="list-disc pl-6 mb-6">
+        <li class="mb-2">
+          <strong class="font-semibold">Vuetify UI:</strong> The website employs
+          Vuetify components for its frontend, resulting in a clean, modern
+          aesthetic and a responsive design that adapts seamlessly to various
+          screen sizes.
+        </li>
+        <li class="mb-2">
+          <strong class="font-semibold">Nuxt.js SSR:</strong> By utilizing
+          Nuxt.js, the application benefits from server-side rendering, leading
+          to improved SEO, faster initial page loads, and a smoother user
+          experience.
+        </li>
+        <li class="mb-2">
+          <strong class="font-semibold">SEO Optimization:</strong> The project
+          incorporates SEO best practices to enhance its visibility on search
+          engines and attract organic traffic.
+        </li>
+        <li class="mb-2">
+          <strong class="font-semibold">Responsive Design:</strong> The
+          website's layout is fully responsive, guaranteeing optimal viewing and
+          interaction across desktops, tablets, and mobile devices.
+        </li>
+        <li class="mb-2">
+          <strong class="font-semibold">Live Production:</strong> The
+          application is currently deployed and accessible to users,
+          demonstrating its readiness for real-world use.
+        </li>
+      </ul>
+    </div>
     <div class="flex justify-center mt-2">
       <a href="https://betabiomed.com/">
         <button
@@ -51,7 +75,14 @@
 </template>
 
 <script setup>
-const images = ["/img/beta/1.png", "/img/beta/2.png", "/img/beta/3.png"];
+const images = [
+  "/img/beta/1.png",
+  "/img/beta/2.png",
+  "/img/beta/3.png",
+  "/img/beta/4.png",
+  "/img/beta/5.png",
+  "/img/beta/6.png",
+];
 </script>
 
 <style></style>

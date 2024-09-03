@@ -61,7 +61,7 @@
         <button
           class="text-indigo-500 bg-transparent border text-semibold border-indigo-500 rounded-md mt-2 w-full hover:bg-indigo-500 hover:text-slate-900"
         >
-          Download my resume
+          <a href="/resume.pdf" target="_blank"> Download my resume </a>
         </button>
       </div>
     </div>
@@ -120,7 +120,7 @@ const projects = [
   {
     name: "Archangel Michael Church Website",
     description:
-      "This project is a dynamic web application built using the Django framework, HTML, CSS (Bootstrap), and JavaScript. My primary goal with this project is to create a visually appealing website with interactive animations, facilitate real-time blog post updates through Twitter integration, and offer an admin panel for convenient content management.",
+      "This project is a dynamic web application built using the Django framework, HTML, CSS (Bootstrap), and JavaScript. My primary goal with this project is to create a visually appealing website with interactive animations.",
     id: 1,
     link: "projects/aamc-website",
   },
