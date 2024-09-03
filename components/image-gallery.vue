@@ -10,8 +10,6 @@
 const props = defineProps<{
   imageIDs: string[];
 }>();
-const images = props.imageIDs;
-console.log(images);
 </script>
 
 <style></style>
