@@ -94,9 +94,7 @@
         ref="gallery"
         :class="galleryVisible ? 'opacity-100' : 'opacity-0'"
       >
-        <hr
-          class="w-full border-t border-indigo-400 border-4 mt-6 rounded-md"
-        />
+        <hr class="w-full border-t border-indigo-400 mt-6 rounded-md" />
         <h2
           class="text-white items-start text-2xl mt-10 font-semibold md:text-4xl md:ml-14"
         >
