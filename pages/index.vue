@@ -132,7 +132,7 @@ const projects = [
 ];
 
 const { data } = await useFetch("/api/images");
-const imageIDs = data?.value?.images;
+const imageIDs = data.value?.images!;
 
 const loaded = ref(false);
 
