@@ -6,17 +6,26 @@ cloudinary.config({
   api_secret: env.cloudinarySecret,
 });
 
+interface cloudinaryResource {
+  public_id: string;
+}
+
 let publicIds: string[] = [];
 cloudinary.api
   .resources({ max_results: 50 })
   .then((jsonData) => {
-    publicIds = jsonData.resources.map((resource) => resource.public_id);
+    publicIds = jsonData.resources.map(
+      (resource: cloudinaryResource) => resource.public_id
+    );
   })
   .catch((error) => {
     console.error("Error fetching public IDs:", error);
   });
 
-export default defineEventHandler(async (event) => {
+interface endpoint {
+  images: string[];
+}
+export default defineEventHandler(async (event): Promise<endpoint> => {
   return {
     images: publicIds,
   };
