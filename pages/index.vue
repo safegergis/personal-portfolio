@@ -107,7 +107,13 @@
 </template>
 
 <script setup lang="ts">
-const projects = [
+interface project {
+  name: string;
+  description: string;
+  id: number;
+  link: string;
+}
+const projects: project[] = [
   {
     name: "BETA Biomed",
     description:
