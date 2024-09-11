@@ -1,6 +1,6 @@
 <template>
-  <div class="flex flex-wrap align-bottom p-10 gap-4 justify-center items-top">
-    <div v-for="i in images">
+  <div class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-0 p-10">
+    <div v-for="i in images" class="break-inside-avoid mb-4">
       <Photograph :imageID="i" />
     </div>
   </div>

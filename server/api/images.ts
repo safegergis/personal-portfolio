@@ -23,6 +23,9 @@ export default defineEventHandler(async (event): Promise<Endpoint> => {
     return { images: publicIds };
   } catch (error) {
     console.error("Error fetching public IDs:", error);
-    return { images: [] };
+    throw createError({
+      statusCode: 500,
+      statusMessage: "Failed to fetch images from Cloudinary",
+    });
   }
 });

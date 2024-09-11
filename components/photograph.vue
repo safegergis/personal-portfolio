@@ -5,8 +5,6 @@
         class="flex-grow rounded-lg transition ease-in-out hover:-translate-y-2 hover:scale-105"
         provider="cloudinary"
         :src="props.imageID"
-        width="300"
-        height="300"
         fit="thumbnail"
         :placeholder="[300, 300, 5, 100]"
       />
