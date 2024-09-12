@@ -65,7 +65,6 @@
         </button>
       </div>
     </div>
-
     <div class="flex items-center mt-5">
       <hr class="flex-grow border-t border-indigo-300" />
       <span class="px-3 text-slate-500"> more below </span>
@@ -80,7 +79,7 @@
         Projects
       </h2>
       <div class="md:flex md:justify-around">
-        <project-widget
+        <ProjectWidget
           v-for="project in projects"
           :key="project.id"
           :title="project.name"
@@ -96,11 +95,17 @@
       >
         <hr class="w-full border-t border-indigo-400 mt-6 rounded-md" />
         <h2
-          class="text-white items-start text-2xl mt-10 font-semibold md:text-4xl md:ml-14"
+          class="text-white text-2xl mt-10 font-semibold md:text-4xl md:ml-14"
         >
-          Gallery
+          Featured Images
         </h2>
-        <image-gallery :imageIDs="imageIDs" />
+        <NuxtLink
+          to="/gallery"
+          class="text-indigo-400 mt-2 md:ml-14 hover:text-indigo-300 transition-colors duration-300"
+        >
+          Click here to view the entire gallery
+        </NuxtLink>
+        <ImageWidget :images="images" class="mx-auto" />
       </div>
     </div>
   </div>
@@ -138,7 +143,7 @@ const projects: project[] = [
 ];
 
 const { data } = await useFetch("/api/images");
-const imageIDs = data.value?.images!;
+const images = data.value?.images!;
 
 const loaded = ref(false);
 

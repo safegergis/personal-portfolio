@@ -8,19 +8,31 @@ cloudinary.config({
 
 interface CloudinaryResource {
   public_id: string;
+  tags: string[];
+}
+
+interface ImageObject {
+  id: string;
+  tags: string[];
 }
 
 interface Endpoint {
-  images: string[];
+  images: ImageObject[];
 }
 
 export default defineEventHandler(async (event): Promise<Endpoint> => {
   try {
-    const result = await cloudinary.api.resources({ max_results: 50 });
-    const publicIds = result.resources.map(
-      (resource: CloudinaryResource) => resource.public_id
+    const result = await cloudinary.api.resources({
+      max_results: 50,
+      tags: true,
+    });
+    const imageObjects = result.resources.map(
+      (resource: CloudinaryResource) => ({
+        id: resource.public_id,
+        tags: resource.tags,
+      })
     );
-    return { images: publicIds };
+    return { images: imageObjects };
   } catch (error) {
     console.error("Error fetching public IDs:", error);
     throw createError({
