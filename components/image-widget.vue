@@ -1,6 +1,6 @@
 <template>
   <div class="my-4">
-    <Carousel :breakpoints="carouselBreakpoints">
+    <Carousel :autoplay="2000" :breakpoints="carouselBreakpoints">
       <Slide class="p-3" v-for="image in featuredImages" :key="image.id">
         <NuxtImg
           provider="cloudinary"
