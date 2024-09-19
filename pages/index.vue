@@ -58,13 +58,13 @@
           this platform, and I welcome the opportunity to connect with others
           who share similar interests.
         </p>
-        <button
-          class="text-indigo-500 bg-transparent border text-semibold border-indigo-500 rounded-md mt-2 w-full hover:bg-indigo-500 hover:text-slate-900"
-          href="/resume.pdf"
-          target="_blank"
-        >
-          Download my resume
-        </button>
+        <a href="/resume.pdf" target="_blank">
+          <button
+            class="text-indigo-500 bg-transparent border text-semibold border-indigo-500 rounded-md mt-2 w-full hover:bg-indigo-500 hover:text-slate-900"
+          >
+            Download my resume
+          </button>
+        </a>
       </div>
     </div>
     <div class="flex items-center mt-5">
