@@ -96,7 +96,6 @@ useHead({
   ],
   link: [
     { rel: "canonical", href: "https://safegergis.com/projects/rn-jobsearch" },
-    { rel: "icon", type: "image/png", href: "/favicon.png" },
   ],
 });
 </script>

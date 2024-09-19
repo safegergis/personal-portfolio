@@ -70,6 +70,8 @@
 const images = [
   "/img/aamc-website/1.png",
   "/img/aamc-website/2.png",
+  "/img/aamc-website/3.png",
+  "/img/aamc-website/4.png",
   // Add more image paths as needed
 ];
 
@@ -94,7 +96,6 @@ useHead({
   ],
   link: [
     { rel: "canonical", href: "https://safegergis.com/projects/aamc-website" },
-    { rel: "icon", type: "image/png", href: "/favicon.png" },
   ],
 });
 </script>

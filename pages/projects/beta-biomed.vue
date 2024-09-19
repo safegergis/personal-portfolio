@@ -106,7 +106,6 @@ useHead({
   ],
   link: [
     { rel: "canonical", href: "https://safegergis.com/projects/beta-biomed" },
-    { rel: "icon", type: "image/png", href: "/favicon.png" },
   ],
 });
 </script>
