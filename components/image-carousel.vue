@@ -2,7 +2,7 @@
   <div class="my-4">
     <Carousel :breakpoints="carouselBreakpoints">
       <Slide class="p-3" v-for="i in images" :key="i">
-        <NuxtImg height="5~00" fit="contain" :src="i" />
+        <NuxtImg height="500" fit="contain" :src="i" />
       </Slide>
       <template #addons>
         <Navigation />
