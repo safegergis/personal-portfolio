@@ -1,5 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import { inject } from "@vercel/analytics";
 export default defineNuxtConfig({
+  
   compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
   modules: [
@@ -20,4 +22,5 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: "page", mode: "out-in" },
   },
+  inject();
 });
