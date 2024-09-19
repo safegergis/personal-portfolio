@@ -60,8 +60,10 @@
         </p>
         <button
           class="text-indigo-500 bg-transparent border text-semibold border-indigo-500 rounded-md mt-2 w-full hover:bg-indigo-500 hover:text-slate-900"
+          href="/resume.pdf"
+          target="_blank"
         >
-          <a href="/resume.pdf" target="_blank"> Download my resume </a>
+          Download my resume
         </button>
       </div>
     </div>
