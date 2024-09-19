@@ -68,10 +68,10 @@
 
 <script setup lang="ts">
 const images = [
-  "/img/aamc-website/1.png",
-  "/img/aamc-website/2.png",
-  "/img/aamc-website/3.png",
-  "/img/aamc-website/4.png",
+  "/img/aamc/1.png",
+  "/img/aamc/2.png",
+  "/img/aamc/3.png",
+  "/img/aamc/4.png",
   // Add more image paths as needed
 ];
 
