@@ -18,7 +18,28 @@ export default defineNuxtConfig({
     },
   },
   app: {
-    pageTransition: { name: "page", mode: "out-in" },
+    head: {
+      title: "Safe Gergis - Junior Fullstack Engineer",
+      meta: [
+        {
+          name: "description",
+          content:
+            "Safe Gergis is a Junior Fullstack Engineer building powerful and efficient web applications. Check out projects and photography.",
+        },
+        {
+          name: "keywords",
+          content:
+            "Fullstack Engineer, Web Developer, Portfolio, Safe Gergis, Programming, Web Applications, Photography",
+        },
+        { name: "viewport", content: "width=device-width, initial-scale=1" },
+        { name: "author", content: "Safe Gergis" },
+      ],
+      link: [
+        { rel: "canonical", href: "https://yourdomain.com/" },
+        { rel: "icon", type: "image/png", href: "/favicon.png" },
+        { rel: "apple-touch-icon", href: "/apple-icon.png" },
+      ],
+    },
   },
   plugins: ["~/plugins/analytics.client.ts"],
 });

@@ -158,6 +158,28 @@ const gallery = ref(null);
 
 const projectsVisible = useElementVisibility(project);
 const galleryVisible = useElementVisibility(gallery);
+
+// SEO Meta Tags
+useHead({
+  title: "Safe Gergis - Junior Fullstack Engineer",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Safe Gergis is a Junior Fullstack Engineer building powerful and efficient web applications. Check out projects and photography.",
+    },
+    {
+      name: "keywords",
+      content:
+        "Fullstack Engineer, Web Developer, Portfolio, Safe Gergis, Programming, Web Applications, Photography",
+    },
+    {
+      name: "viewport",
+      content: "width=device-width, initial-scale=1",
+    },
+  ],
+  link: [{ rel: "canonical", href: "https://safegergis.com/" }],
+});
 </script>
 
 <style></style>
