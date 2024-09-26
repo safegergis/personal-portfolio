@@ -141,6 +141,13 @@ const projects: project[] = [
     id: 2,
     link: "projects/rn-jobsearch",
   },
+  {
+    name: "AlgoCompare",
+    description:
+      "AlgoCompare is a web application that allows users to compare the performance of different algorithims for sorting. It allows users to enter an array and select an algorithim to sort the array. ",
+    id: 3,
+    link: "projects/algocompare",
+  },
 ];
 
 const { data } = await useFetch("/api/images");
