@@ -7,13 +7,14 @@
       class="text-indigo-400 text-5xl md:text-7xl font-bold"
       href="https://github.com/safegergis/JobSearchRN"
       target="_blank"
+      rel="noopener noreferrer"
       >React Native Job Searching Application</a
     >
     <NuxtLink
       class="text-gray-300 text-xl md:text-3xl font-medium hover:text-white ml-1"
-      to="/"
+      to="/projects"
     >
-      go back?
+      Go back
     </NuxtLink>
     <div class="bg-slate-900 mx-auto">
       <image-carousel :images="images" />
@@ -67,12 +68,36 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const images = [
   "/img/jobsearch/1.png",
   "/img/jobsearch/2.png",
   "/img/jobsearch/3.png",
 ];
+
+// SEO Meta Tags
+useHead({
+  title: "React Native Job Searching Application - JobFinder",
+  meta: [
+    {
+      name: "description",
+      content:
+        "JobFinder is a React Native application designed to help users find their dream jobs by leveraging the RapidAPI job search API for a seamless experience.",
+    },
+    {
+      name: "keywords",
+      content:
+        "React Native, JobSearch App, JobFinder, Mobile Development, RapidAPI, Job Hunting, Fullstack Engineer",
+    },
+    {
+      name: "viewport",
+      content: "width=device-width, initial-scale=1",
+    },
+  ],
+  link: [
+    { rel: "canonical", href: "https://safegergis.com/projects/rn-jobsearch" },
+  ],
+});
 </script>
 
 <style></style>

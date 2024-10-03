@@ -40,29 +40,30 @@
           About me
         </h2>
         <p class="text-md text-white text-left md:text-lg">
-          Hello, I'm a senior Computer Science student at California State
-          University, Fullerton, with a lifelong passion for programming. My
-          interests span a wide range of technologies, including game
-          development, web applications, and embedded systems. Beyond my
-          technical pursuits, I find joy in exploring nature through photography
-          and hiking.
+          Hi there! I'm a Computer Science student at Cal State Fullerton with a
+          long-standing interest in programming. My curiosity spans various tech
+          areas, including game development, web applications, and embedded
+          systems. When I'm not coding, I enjoy exploring nature through
+          photography and hiking.
           <br />
           <br />
-          Currently, I am actively involved in development projects for Medten
-          and Orantech, where I apply my academic knowledge to solve real-world
-          challenges. Last year, I gained valuable experience as an intern at
-          CompTIA, further expanding my expertise in the IT industry.
+          Currently, I'm working on development projects at Medten and Orantech,
+          where I'm applying what I've learned to real-world challenges. Last
+          year, I had the opportunity to intern at CompTIA, which gave me
+          valuable insights into the IT industry.
           <br />
           <br />
-          I am excited to share some of my photography and personal projects on
-          this platform, and I welcome the opportunity to connect with others
-          who share similar interests.
+          I've created this space to share some of my photography and personal
+          projects. I'm always eager to connect with others who have similar
+          interests or just want to chat about tech.
         </p>
-        <button
-          class="text-indigo-500 bg-transparent border text-semibold border-indigo-500 rounded-md mt-2 w-full hover:bg-indigo-500 hover:text-slate-900"
-        >
-          <a href="/resume.pdf" target="_blank"> Download my resume </a>
-        </button>
+        <a href="/resume.pdf" target="_blank">
+          <button
+            class="text-indigo-500 bg-transparent border text-semibold border-indigo-500 rounded-md mt-2 w-full hover:bg-indigo-500 hover:text-slate-900"
+          >
+            Download my resume
+          </button>
+        </a>
       </div>
     </div>
     <div class="flex items-center mt-5">
@@ -78,14 +79,14 @@
       <h2 class="text-white text-2xl font-semibold md:text-4xl md:ml-14">
         Projects
       </h2>
-      <div class="md:flex md:justify-around">
+      <div class="md:flex flex-wrap mx-10">
         <ProjectWidget
           v-for="project in projects"
           :key="project.id"
           :title="project.name"
           :description="project.description"
           :link="project.link"
-          class="my-4"
+          class="m-4"
         />
       </div>
       <div
@@ -140,6 +141,13 @@ const projects: project[] = [
     id: 2,
     link: "projects/rn-jobsearch",
   },
+  {
+    name: "AlgoCompare",
+    description:
+      "AlgoCompare is a web application that allows users to compare the performance of different algorithims for sorting. It allows users to enter an array and select an algorithim to sort the array. ",
+    id: 3,
+    link: "projects/algocompare",
+  },
 ];
 
 const { data } = await useFetch("/api/images");
@@ -156,6 +164,28 @@ const gallery = ref(null);
 
 const projectsVisible = useElementVisibility(project);
 const galleryVisible = useElementVisibility(gallery);
+
+// SEO Meta Tags
+useHead({
+  title: "Safe Gergis - Junior Fullstack Engineer",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Safe Gergis is a Junior Fullstack Engineer building powerful and efficient web applications. Check out projects and photography.",
+    },
+    {
+      name: "keywords",
+      content:
+        "Fullstack Engineer, Web Developer, Portfolio, Safe Gergis, Programming, Web Applications, Photography",
+    },
+    {
+      name: "viewport",
+      content: "width=device-width, initial-scale=1",
+    },
+  ],
+  link: [{ rel: "canonical", href: "https://safegergis.com/" }],
+});
 </script>
 
 <style></style>

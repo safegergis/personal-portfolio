@@ -3,7 +3,7 @@
     class="flex flex-col border-2 border-indigo-500 p-2 shadow-md justify-between rounded-md w-full md:w-96"
   >
     <NuxtLink :to="link">
-      <h3 class="text-indigo-400 font-semibold text-xl md:text-3xl">
+      <h3 class="text-indigo-400 font-semibold text-xl md:text-2xl">
         {{ title }}
       </h3>
     </NuxtLink>

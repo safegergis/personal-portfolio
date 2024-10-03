@@ -66,8 +66,38 @@
   </div>
 </template>
 
-<script setup>
-const images = ["/img/aamc/1.png", "/img/aamc/2.png"];
+<script setup lang="ts">
+const images = [
+  "/img/aamc/1.png",
+  "/img/aamc/2.png",
+  "/img/aamc/3.png",
+  "/img/aamc/4.png",
+  // Add more image paths as needed
+];
+
+// SEO Meta Tags
+useHead({
+  title: "Demo Church Website - Archangel Michael",
+  meta: [
+    {
+      name: "description",
+      content:
+        "A dynamic church website built with Django, featuring interactive animations, real-time blog updates, and an admin panel for content management.",
+    },
+    {
+      name: "keywords",
+      content:
+        "Church Website, Django, Web Development, Interactive Animations, Real-time Updates, Content Management, Archangel Michael",
+    },
+    {
+      name: "viewport",
+      content: "width=device-width, initial-scale=1",
+    },
+  ],
+  link: [
+    { rel: "canonical", href: "https://safegergis.com/projects/aamc-website" },
+  ],
+});
 </script>
 
 <style></style>

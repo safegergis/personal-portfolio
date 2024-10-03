@@ -7,6 +7,7 @@
       class="text-indigo-400 text-5xl md:text-7xl font-bold"
       href="https://betabiomed.com"
       target="_blank"
+      rel="noopener noreferrer"
       >BETA Biomed</a
     >
     <NuxtLink
@@ -74,7 +75,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const images = [
   "/img/beta/1.png",
   "/img/beta/2.png",
@@ -83,6 +84,30 @@ const images = [
   "/img/beta/5.png",
   "/img/beta/6.png",
 ];
+
+// SEO Meta Tags
+useHead({
+  title: "BETA Biomed - Biomedical Equipment Website",
+  meta: [
+    {
+      name: "description",
+      content:
+        "BETA Biomed's new biomedical equipment website built with Nuxt.js, focusing on performance and SEO to connect researchers and healthcare providers.",
+    },
+    {
+      name: "keywords",
+      content:
+        "BETA Biomed, Biomedical Equipment, Nuxt.js, SEO, Web Development",
+    },
+    {
+      name: "viewport",
+      content: "width=device-width, initial-scale=1",
+    },
+  ],
+  link: [
+    { rel: "canonical", href: "https://safegergis.com/projects/beta-biomed" },
+  ],
+});
 </script>
 
 <style></style>
