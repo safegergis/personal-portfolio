@@ -15,6 +15,8 @@
     "@vueuse/core": "^11.0.3",
     "@vueuse/nuxt": "^11.0.3",
     "cloudinary": "^2.4.0",
+    "embla-carousel-autoplay": "^8.3.0",
+    "embla-carousel-vue": "^8.3.0",
     "nuxt": "^3.12.4",
     "vue": "latest",
     "vue3-carousel-nuxt": "^1.1.2"
