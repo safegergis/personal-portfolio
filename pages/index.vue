@@ -123,31 +123,38 @@ interface project {
 }
 const projects: project[] = [
   {
+    name: "Playability",
+    description:
+      "Playability is a full stack web app dedicated to making video games more accessible and inclusive for everyone, especially those with disabilities. Our mission is to empower gamers of all abilities by providing comprehensive accessibility information and fostering a community-driven approach to game accessibility.",
+    id: 0,
+    link: "projects/playability",
+  },
+  {
     name: "BETA Biomed",
     description:
       "BETA Biomed's new biomedical equipment website, built on Nuxt, combines performance and SEO to connect researchers and healthcare providers with the tools they need.  Responsive design ensures accessibility on any device.",
-    id: 0,
+    id: 1,
     link: "projects/beta-biomed",
   },
   {
     name: "Archangel Michael Church Website",
     description:
       "This project is a dynamic web application built using the Django framework, HTML, CSS (Bootstrap), and JavaScript. My primary goal with this project is to create a visually appealing website with interactive animations.",
-    id: 1,
+    id: 2,
     link: "projects/aamc-website",
   },
   {
     name: "React Native Job Searching App",
     description:
       "A user-friendly mobile app built with React Native that helps users connect with their dream job. JobFinder leverages the power of the RapidAPI job search API to deliver a seamless and effective job searching experience.",
-    id: 2,
+    id: 3,
     link: "projects/rn-jobsearch",
   },
   {
     name: "AlgoCompare",
     description:
       "AlgoCompare is a web application that allows users to compare the performance of different algorithims for sorting. It allows users to enter an array and select an algorithim to sort the array. ",
-    id: 3,
+    id: 4,
     link: "projects/algocompare",
   },
 ];

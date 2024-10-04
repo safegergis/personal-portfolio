@@ -16,10 +16,20 @@
       <div class="relative m-auto">
         <button class="absolute right-1 z-10" @click="modalShown = !modalShown">
           <Icon
-            name="formkit:close"
+            name="lucide:x"
             class="text-white text-opacity-70 hover:text-opacity-100 z-10 size-10"
           />
         </button>
+        <a
+          :href="`https://res.cloudinary.com/safegergisportfolio/image/upload/fl_attachment/v1726095766/${props.imageID}`"
+          download
+          class="absolute right-12 z-10"
+        >
+          <Icon
+            name="lucide:cloud-download"
+            class="text-white text-opacity-70 hover:text-opacity-100 z-10 size-10"
+          />
+        </a>
         <NuxtImg
           class="max-w-screen max-h-screen lg:max-w-[1000px] lg:max-h-[1000px] object-cover"
           provider="cloudinary"
@@ -39,4 +49,14 @@ const props = defineProps<{
 const modalShown = ref(false);
 </script>
 
-<style></style>
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>

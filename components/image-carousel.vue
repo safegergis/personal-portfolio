@@ -5,7 +5,7 @@
     </button>
     <div class="overflow-hidden" ref="emblaRef">
       <div class="flex items-center">
-        <div class="flex-[0_0_50%] mx-5" v-for="image in images" :key="image">
+        <div class="flex-[0_0_33%] mx-5" v-for="image in images" :key="image">
           <NuxtImg height="500" :src="image" fit="contain" />
         </div>
       </div>
