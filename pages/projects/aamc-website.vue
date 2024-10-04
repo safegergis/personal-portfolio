@@ -1,14 +1,16 @@
 <template>
   <div class="flex flex-col justify-start md:p-12 bg-slate-900">
     <h1 class="text-white text-2xl md:text-4xl font-semibold">
-      Project <br />
+      Project
+      <br />
     </h1>
     <a
       class="text-indigo-400 text-5xl md:text-7xl font-bold"
       href="https://github.com/safegergis/aamc-website/"
       target="_blank"
-      >Demo Church Website</a
     >
+      Demo Church Website
+    </a>
     <NuxtLink
       class="text-gray-300 text-xl md:text-3xl font-medium hover:text-white ml-1"
       to="/"
@@ -33,24 +35,24 @@
 
       <ul class="list-disc pl-6 mb-6">
         <li class="mb-2">
-          <strong class="font-semibold">Animations:</strong> I've integrated
-          animations throughout the website to enhance user engagement and
-          provide a visually pleasing experience. From subtle hover effects to
-          more elaborate transitions, animations are used to create a dynamic
-          interface.
+          <strong class="font-semibold">Animations:</strong>
+          I've integrated animations throughout the website to enhance user
+          engagement and provide a visually pleasing experience. From subtle
+          hover effects to more elaborate transitions, animations are used to
+          create a dynamic interface.
         </li>
         <li class="mb-2">
-          <strong class="font-semibold">Twitter Integration:</strong> The
-          website connects to the Twitter API to fetch and display the latest
-          blog posts or updates from a specified Twitter account. This ensures
-          that the website's content remains up-to-date and relevant.
+          <strong class="font-semibold">Twitter Integration:</strong>
+          The website connects to the Twitter API to fetch and display the
+          latest blog posts or updates from a specified Twitter account. This
+          ensures that the website's content remains up-to-date and relevant.
         </li>
         <li class="mb-2">
-          <strong class="font-semibold">Admin Page:</strong> I've implemented an
-          admin page that is accessible only to authorized users. This admin
-          panel allows content managers or administrators to conveniently add,
-          edit, or remove blog posts, update animations, and manage various
-          aspects of the website.
+          <strong class="font-semibold">Admin Page:</strong>
+          I've implemented an admin page that is accessible only to authorized
+          users. This admin panel allows content managers or administrators to
+          conveniently add, edit, or remove blog posts, update animations, and
+          manage various aspects of the website.
         </li>
       </ul>
     </div>

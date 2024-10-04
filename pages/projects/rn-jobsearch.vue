@@ -1,20 +1,22 @@
 <template>
   <div class="flex flex-col justify-start md:p-12">
     <h1 class="text-white text-2xl md:text-4xl font-semibold">
-      Project <br />
+      Project
+      <br />
     </h1>
     <a
       class="text-indigo-400 text-5xl md:text-7xl font-bold"
       href="https://github.com/safegergis/JobSearchRN"
       target="_blank"
       rel="noopener noreferrer"
-      >React Native Job Searching Application</a
     >
+      React Native Job Searching Application
+    </a>
     <NuxtLink
       class="text-gray-300 text-xl md:text-3xl font-medium hover:text-white ml-1"
-      to="/projects"
+      to="/"
     >
-      Go back
+      go back?
     </NuxtLink>
     <div class="bg-slate-900 mx-auto">
       <image-carousel :images="images" />

@@ -6,7 +6,8 @@
     >
       <div class="md:flex-none md:mb-24">
         <h1 class="text-white text-2xl font-semibold mb-2 md:text-5xl">
-          Hi, my name is <br />
+          Hi, my name is
+          <br />
         </h1>
         <h1 class="text-indigo-400 text-5xl font-bold md:text-7xl">
           Safe Gergis
@@ -68,7 +69,7 @@
     </div>
     <div class="flex items-center mt-5">
       <hr class="flex-grow border-t border-indigo-300" />
-      <span class="px-3 text-slate-500"> more below </span>
+      <span class="px-3 text-slate-500">more below</span>
       <hr class="flex-grow border-t border-indigo-300" />
     </div>
     <div
@@ -79,14 +80,15 @@
       <h2 class="text-white text-2xl font-semibold md:text-4xl md:ml-14">
         Projects
       </h2>
-      <div class="md:flex flex-wrap mx-10">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mx-auto max-w-7xl my-4"
+      >
         <ProjectWidget
           v-for="project in projects"
           :key="project.id"
           :title="project.name"
           :description="project.description"
           :link="project.link"
-          class="m-4"
         />
       </div>
       <div
