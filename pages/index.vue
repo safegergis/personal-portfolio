@@ -1,7 +1,7 @@
 <template>
   <div class="bg-slate-900 flex flex-col justify-start content-middle">
     <div
-      class="md:h-screen md:flex md:items-center md:px-12 md:justify-between transition ease-in-out duration-700"
+      class="md:pt-8 md:flex md:items-center md:px-12 md:justify-between transition ease-in-out duration-700"
       :class="loaded ? 'opacity-100 ' : 'opacity-0 translate-y-40'"
     >
       <div class="md:flex-none md:mb-24">
@@ -9,7 +9,7 @@
           Hi, my name is
           <br />
         </h1>
-        <h1 class="text-indigo-400 text-5xl font-bold md:text-7xl">
+        <h1 class="text-indigo-400 text-5xl font-bold mb-2 md:text-7xl">
           Safe Gergis
         </h1>
         <h4 class="text-white text-3xl font-semibold md:text-5xl">
@@ -32,6 +32,21 @@
           <a href="https://www.instagram.com/safe.gergis/" target="_blank">
             <Icon name="mdi:instagram" class="size-6 ml-2" />
           </a>
+        </div>
+
+        <div class="flex space-x-4 mt-4">
+          <NuxtLink 
+            to="/skills" 
+            class="text-indigo-400 border border-indigo-400 px-4 py-2 rounded-md hover:bg-indigo-400 hover:text-slate-900 transition-colors duration-300"
+          >
+            Skills
+          </NuxtLink>
+          <NuxtLink 
+            to="/contact" 
+            class="text-indigo-400 border border-indigo-400 px-4 py-2 rounded-md hover:bg-indigo-400 hover:text-slate-900 transition-colors duration-300"
+          >
+            Contact
+          </NuxtLink>
         </div>
       </div>
       <div class="md:p-4 md:mb-24 md:w-1/2">
