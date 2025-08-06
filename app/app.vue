@@ -1,8 +1,11 @@
 <template>
   <div :class="{ 'dark': isDark }" class="theme-wrapper">
-    <NuxtLayout>
-      <NuxtPage />
-    </NuxtLayout>
+    <AnimatedBackground />
+    <div class="content-layer">
+      <NuxtLayout>
+        <NuxtPage />
+      </NuxtLayout>
+    </div>
   </div>
 </template>
 
@@ -184,4 +187,9 @@ const { isDark } = useTheme()
 .animate-delay-200 { animation-delay: 200ms; }
 .animate-delay-300 { animation-delay: 300ms; }
 .animate-delay-400 { animation-delay: 400ms; }
+
+.content-layer {
+  position: relative;
+  z-index: 10;
+}
 </style>

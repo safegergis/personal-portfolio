@@ -2,15 +2,6 @@
   <div class="min-h-screen">
     <!-- Landing Page Hero Section -->
     <section class="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-      <!-- Animated Liquid Background -->
-      <div class="absolute inset-0 z-0">
-        <div class="liquid-bg">
-          <div class="liquid-blob blob-1"></div>
-          <div class="liquid-blob blob-2"></div>
-          <div class="liquid-blob blob-3"></div>
-          <div class="liquid-blob blob-4"></div>
-        </div>
-      </div>
       
       <!-- Theme Toggle - Floating in top right -->
       <div class="fixed top-6 right-6 z-50">
@@ -97,16 +88,6 @@
       class="py-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden"
       ref="projectSection"
     >
-      <!-- Extended Liquid Background -->
-      <div class="absolute inset-0 z-0">
-        <div class="liquid-bg-extended">
-          <div class="liquid-blob-extended blob-5"></div>
-          <div class="liquid-blob-extended blob-6"></div>
-          <div class="liquid-blob-extended blob-7"></div>
-        </div>
-        <!-- Gradient fade overlay -->
-        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-white/50 to-white dark:via-slate-900/50 dark:to-slate-900"></div>
-      </div>
       <div class="max-w-7xl mx-auto relative z-10">
         <div 
           class="space-y-12"
@@ -156,15 +137,6 @@
       class="py-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden"
       ref="gallerySection"
     >
-      <!-- Final liquid background fade -->
-      <div class="absolute inset-0 z-0">
-        <div class="liquid-bg-final">
-          <div class="liquid-blob-final blob-8"></div>
-          <div class="liquid-blob-final blob-9"></div>
-        </div>
-        <!-- Strong fade to background -->
-        <div class="absolute inset-0 bg-gradient-to-b from-white/70 via-white/85 to-white dark:from-slate-900/70 dark:via-slate-900/85 dark:to-slate-900"></div>
-      </div>
       <div class="max-w-7xl mx-auto relative z-10">
         <div 
           class="space-y-12"
@@ -281,130 +253,3 @@ useHead({
 });
 </script>
 
-<style>
-/* Animated Liquid Background */
-.liquid-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.liquid-blob {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(40px);
-  animation: blob 7s infinite;
-  opacity: 0.3;
-}
-
-.dark .liquid-blob {
-  opacity: 0.2;
-}
-
-.blob-1 {
-  top: 0;
-  left: 0;
-  width: 300px;
-  height: 300px;
-  background: linear-gradient(45deg, #3b82f6, #6366f1);
-  animation-delay: -3s;
-}
-
-.blob-2 {
-  top: 0;
-  right: 0;
-  width: 250px;
-  height: 250px;
-  background: linear-gradient(45deg, #8b5cf6, #a855f7);
-  animation-delay: -1s;
-}
-
-.blob-3 {
-  bottom: 0;
-  left: 20%;
-  width: 350px;
-  height: 350px;
-  background: linear-gradient(45deg, #06b6d4, #0891b2);
-  animation-delay: -5s;
-}
-
-.blob-4 {
-  bottom: 20%;
-  right: 20%;
-  width: 200px;
-  height: 200px;
-  background: linear-gradient(45deg, #f59e0b, #f97316);
-  animation-delay: -2s;
-}
-
-@keyframes blob {
-  0%, 100% {
-    transform: translate(0, 0) scale(1);
-  }
-  33% {
-    transform: translate(30px, -50px) scale(1.1);
-  }
-  66% {
-    transform: translate(-20px, 20px) scale(0.9);
-  }
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .liquid-blob {
-    filter: blur(30px);
-  }
-  
-  .blob-1, .blob-3 {
-    width: 200px;
-    height: 200px;
-  }
-  
-  .blob-2, .blob-4 {
-    width: 150px;
-    height: 150px;
-  }
-}
-
-@media (max-width: 480px) {
-  .liquid-blob {
-    filter: blur(20px);
-    opacity: 0.5;
-  }
-  
-  .dark .liquid-blob {
-    opacity: 0.3;
-  }
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .liquid-blob {
-    filter: blur(30px);
-  }
-  
-  .blob-1, .blob-3 {
-    width: 200px;
-    height: 200px;
-  }
-  
-  .blob-2, .blob-4 {
-    width: 150px;
-    height: 150px;
-  }
-}
-
-@media (max-width: 480px) {
-  .liquid-blob {
-    filter: blur(20px);
-    opacity: 0.5;
-  }
-  
-  .dark .liquid-blob {
-    opacity: 0.3;
-  }
-}
-</style>
