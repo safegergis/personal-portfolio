@@ -1,6 +1,6 @@
 <template>
   <div :class="{ 'dark': isDark }" class="theme-wrapper">
-    <AnimatedBackground />
+    <AnimatedBackground :blob-count="16" />
     <div class="content-layer">
       <NuxtLayout>
         <NuxtPage />
