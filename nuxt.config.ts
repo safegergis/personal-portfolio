@@ -9,12 +9,13 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "vue3-carousel-nuxt",
     "@primevue/nuxt-module",
+    "@nuxt/content",
   ],
   primevue: {
     options: {
-      unstyled: true
+      unstyled: true,
     },
-    importPT: { from: '~/presets/apple.ts' }
+    importPT: { from: "~/presets/apple.ts" },
   },
   runtimeConfig: {
     cloudinarySecret: process.env.CLOUDINARY_SECRET_KEY,

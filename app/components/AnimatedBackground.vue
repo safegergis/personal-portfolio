@@ -19,6 +19,8 @@
 <script setup>
 import { ref, onMounted, reactive, onUnmounted, computed } from 'vue'
 
+const { isDark } = useTheme()
+
 // Props for customization
 const props = defineProps({
   // Number of blobs
@@ -260,7 +262,7 @@ const getBlobStyle = (index) => {
     top: `${blob.baseY}%`,
     background: backgroundStyle,
     filter: `blur(${blob.blurAmount}px)`,
-    opacity: document.documentElement.classList.contains('dark') ? props.darkModeOpacity : blob.opacity,
+    opacity: isDark.value ? props.darkModeOpacity : blob.opacity,
     transform: `translate(${blob.x}px, ${blob.y}px) scale(${blob.scale}) translate(-50%, -50%)`,
     transition: isClicked.value 
       ? 'transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)' 
