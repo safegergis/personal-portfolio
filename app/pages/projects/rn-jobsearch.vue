@@ -19,7 +19,7 @@
       go back?
     </NuxtLink>
     <div class="bg-slate-900 mx-auto">
-      <image-carousel :images="images" />
+      <ImageCarousel :images="images" />
     </div>
     <div class="container mx-auto p-4 text-white">
       <h2 class="text-3xl font-bold mb-4">Description</h2>
