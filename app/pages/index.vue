@@ -160,7 +160,15 @@
             isDark ? 'bg-slate-800 border-gray-700' : 'bg-white border-gray-200'
           ]">
             <template #content>
-              <ImageWidget :images="images" class="w-full" />
+              <ImageWidget 
+                :images="images" 
+                :filter-featured="true"
+                :num-visible="3"
+                :autoplay-interval="2000"
+                image-provider="cloudinary"
+                image-class="object-cover"
+                class="w-full" 
+              />
             </template>
           </Card>
         </div>

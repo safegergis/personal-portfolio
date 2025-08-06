@@ -49,7 +49,7 @@ const props = defineProps<{
 const modalShown = ref(false);
 </script>
 
-<style scoped>
+<style >
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.3s ease;

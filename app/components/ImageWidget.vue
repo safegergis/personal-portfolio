@@ -1,57 +1,140 @@
 <template>
-  <div class="flex my-4">
-    <button @click="onPrevious">
-      <Icon class="text-white w-10 h-10" name="lucide:arrow-left" />
-    </button>
-    <div class="overflow-hidden" ref="emblaRef">
-      <div class="flex">
-        <div
-          class="flex-[0_0_33%]"
-          v-for="image in featuredImages"
-          :key="image.id"
-        >
+  <div class="my-6">
+    <Carousel 
+      v-if="carouselImages.length > 0"
+      :value="carouselImages" 
+      :num-visible="numVisible" 
+      :num-scroll="1" 
+      :circular="true"
+      :autoplay-interval="autoplayInterval"
+      :show-indicators="showIndicators"
+      :show-navigators="showNavigators"
+      :responsive-options="responsiveOptions"
+      :unstyled="false"
+    >
+      <template #item="slotProps">
+        <div class="carousel-item-wrapper">
           <NuxtImg
-            provider="cloudinary"
-            height="500"
-            :src="image.id"
-            fit="cover"
+            :provider="imageProvider"
+            :src="getImageSrc(slotProps.data)"
+            :alt="getImageAlt(slotProps.data, slotProps.index)"
+            class="carousel-image"
+            :class="imageClass"
           />
         </div>
-      </div>
+      </template>
+    </Carousel>
+    <div v-else class="empty-state">
+      <Icon name="lucide:image-off" class="w-12 h-12 text-gray-400 mb-4" />
+      <p class="text-gray-500 text-center">{{ emptyMessage }}</p>
     </div>
-    <button @click="onNext">
-      <Icon class="text-white w-10 h-10" name="lucide:arrow-right" />
-    </button>
   </div>
 </template>
 
 <script setup lang="ts">
-import useEmblaCarousel from "embla-carousel-vue";
-import autoPlay from "embla-carousel-autoplay";
-
-const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
-  autoPlay({ delay: 5000 }),
-]);
-
-const onNext = () => {
-  if (emblaApi.value) emblaApi.value.scrollNext();
-};
-
-const onPrevious = () => {
-  if (emblaApi.value) emblaApi.value.scrollPrev();
-};
-
 interface ImageObject {
   id: string;
   tags: string[];
 }
-const props = defineProps<{
-  images: ImageObject[];
-}>();
 
-const featuredImages = props.images.filter((image) =>
-  image.tags.includes("featured")
-);
+type ImageInput = string | ImageObject;
+
+const props = withDefaults(defineProps<{
+  images: ImageInput[];
+  // Display options
+  numVisible?: number;
+  showIndicators?: boolean;
+  showNavigators?: boolean;
+  autoplayInterval?: number;
+  // Filtering
+  filterFeatured?: boolean;
+  // Styling
+  imageClass?: string;
+  emptyMessage?: string;
+  // Provider
+  imageProvider?: string;
+}>(), {
+  numVisible: 1,
+  showIndicators: true,
+  showNavigators: true,
+  autoplayInterval: 4000,
+  filterFeatured: false,
+  imageClass: 'object-cover',
+  emptyMessage: 'No images available',
+  imageProvider: undefined
+});
+
+const { isDark } = useTheme();
+
+// Process images based on type and filtering
+const carouselImages = computed(() => {
+  if (!props.images || props.images.length === 0) return [];
+  
+  if (props.filterFeatured) {
+    return props.images.filter((image): image is ImageObject => 
+      typeof image === 'object' && image.tags?.includes('featured')
+    );
+  }
+  
+  return props.images;
+});
+
+// Responsive options
+const responsiveOptions = [
+  {
+    breakpoint: '1024px',
+    numVisible: Math.min(props.numVisible, 3),
+    numScroll: 1
+  },
+  {
+    breakpoint: '768px',
+    numVisible: Math.min(props.numVisible, 2),
+    numScroll: 1
+  },
+  {
+    breakpoint: '640px',
+    numVisible: 1,
+    numScroll: 1
+  }
+];
+
+// Helper functions
+const getImageSrc = (image: ImageInput): string => {
+  return typeof image === 'string' ? image : image.id;
+};
+
+const getImageAlt = (image: ImageInput, index: number): string => {
+  const baseAlt = typeof image === 'string' ? 'Image' : 'Photo';
+  return `${baseAlt} ${index + 1}`;
+};
+
 </script>
 
-<style></style>
+<style scoped>
+.carousel-item-wrapper {
+  @apply p-3;
+}
+
+.carousel-image {
+  @apply w-full h-48 md:h-64 lg:h-80 object-cover rounded-lg shadow-lg transition-transform hover:scale-105;
+}
+
+.empty-state {
+  @apply flex flex-col items-center justify-center p-12 rounded-lg bg-gray-50 border border-gray-200;
+}
+
+:global(.dark) .empty-state {
+  @apply bg-gray-800 border-gray-700;
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  .carousel-image {
+    @apply h-40;
+  }
+  
+  .carousel-item-wrapper {
+    @apply p-2;
+  }
+}
+</style>

@@ -7,7 +7,6 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "@nuxt/image",
     "@vueuse/nuxt",
-    "vue3-carousel-nuxt",
     "@primevue/nuxt-module",
     "@nuxt/content",
   ],
