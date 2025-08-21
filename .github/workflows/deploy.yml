@@ -64,4 +64,4 @@ jobs:
             [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  
             [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  
             cd ${{ env.DEPLOY_PATH }} 
-            pm2 reload .output/server/index.mjs --name nuxt-app || pm2 start .output/server/index.mjs --name nuxt-app
+            pm2 reload ecosystem.config.cjs --env production || pm2 start ecosystem.config.cjs --env production
